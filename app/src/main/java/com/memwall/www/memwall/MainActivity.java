@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
+    EditText hashTag;
 
 
     @Override
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
 
-        EditText hashTag = (EditText) findViewById(R.id.mainhashtag);
+        hashTag = (EditText) findViewById(R.id.mainhashtag);
         hashTag.setHintTextColor(Color.LTGRAY);
     }
 
@@ -77,5 +78,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public String getHashTag(){
+        return hashTag.getText().toString();
+    }
 
 }
