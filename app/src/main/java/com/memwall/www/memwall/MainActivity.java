@@ -1,5 +1,7 @@
 package com.memwall.www.memwall;
 
+import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,6 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,13 +26,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //set up toolbar in place of action bar
-        Toolbar maintToolbar = (Toolbar) findViewById(R.id.main_toolbar);
-        setSupportActionBar(maintToolbar);
+       Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        setSupportActionBar(mainToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
 
+        EditText hashTag = (EditText) findViewById(R.id.mainhashtag);
+        hashTag.setHintTextColor(Color.LTGRAY);
     }
 
 
@@ -69,4 +76,6 @@ public class MainActivity extends AppCompatActivity {
             return 5;
         }
     }
+
+
 }

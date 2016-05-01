@@ -14,11 +14,15 @@
         android:gravity="center">
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/myFAB"
+            app:fabSize="mini"
+            android:src="@drawable/ic_camera_white_48dp"
+            android:id="@+id/picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            app:elevation="4dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@android:color/white"
+            />
         />
 
     </LinearLayout>
@@ -27,14 +31,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/darkerlightblue">`
+        android:background="@color/darkerlightblue"
+        android:gravity="center">
+
+        <android.support.design.widget.FloatingActionButton
+            app:fabSize="mini"
+            android:src="@drawable/ic_video_white_48dp"
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@android:color/white"
+            />
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/midblue">`
+        android:background="@color/midblue"
+        android:gravity="center">
+
+        <android.support.design.widget.FloatingActionButton
+            app:fabSize="mini"
+            android:src="@drawable/ic_lead_pencil_white_48dp"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@android:color/white"
+            />
+
 
     </LinearLayout>
 
